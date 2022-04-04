@@ -45,6 +45,7 @@ public abstract class Player {
         if (this.monster.getSpeed() >= enemy.getMonster().getSpeed()) {
             return true;
         }
+	return false;
     }
 
     /**
