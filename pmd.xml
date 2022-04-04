@@ -11,12 +11,13 @@
     </rule>
     
 <rule ref="category/java/codestyle.xml">
-    <exclude name="WhileLoopsMustUseBraces"/>
+    <exclude name="LocalVariableCouldBeFinal"/>
     <exclude name="IfElseStmtsMustUseBraces"/>
 </rule>
 
  <rule ref="category/java/design.xml">
 
     </rule>
+  //  <exclude-pattern>.**/category/java/design.xml/LocalVariableCouldBeFinal.*</exclude-pattern>
 
 </ruleset>
