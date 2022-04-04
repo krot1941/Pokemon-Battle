@@ -25,7 +25,7 @@ public abstract class Player {
      * @return either true or false
      */
     public boolean hasLost() {
-        return (monster.getHP() <= 0);
+        return monster.getHP() <= 0;
     }
 
     /**
@@ -36,7 +36,7 @@ public abstract class Player {
      * @return either true or false
      */
     public boolean isFasterThan(Player enemy) {
-       return  (this.monster.getSpeed() >= enemy.getMonster().getSpeed());
+       return  this.monster.getSpeed() >= enemy.getMonster().getSpeed();
     }
 
     /**
@@ -52,7 +52,7 @@ public abstract class Player {
         Random random = new Random();
         double roll = random.nextDouble();
         int issupereffective = 10;
-
+	int supereffectivestr=4, noteffectivestr=1, normeffective = 2;
         System.out.println(this.monster.getName() + " uses "+ this.monster.getMove(movement).getName());
        // @SuppressWarnings({"UseEqualsToCompareStrings","CompareObjectsWithEquals"});
         //attack has missed
@@ -70,21 +70,21 @@ public abstract class Player {
 	
             for(int i=0; i <= 2; i++) {
                 if (this.monster.getMove(movement).getType() == weakness[i]) { 
-                    issupereffective = 4;
+                    issupereffective = supereffectivestr;
                     break;
                 }
                 if (this.monster.getMove(movement).getType() == strength[i]) {
-                    issupereffective = 1;
+                    issupereffective = noteffectivestr;
                     break;
                 }
                 else {
-                    issupereffective = 2; 
+                    issupereffective = normeffective; 
                 }
             }
 
             //Damage calculator
 	    
-            int supereffectivestr=4, noteffectivestr=1, damage = this.monster.getAttack() + this.monster.getMove(movement).getPower() 
+            int damage = this.monster.getAttack() + this.monster.getMove(movement).getPower() 
                            - player.monster.getDefense();
             damage = (damage *issupereffective) / 2; //adjusts for dealing with int
             player.monster.hp -= damage;
