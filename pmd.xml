@@ -5,12 +5,12 @@
          xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.sourceforge.io/ruleset_2_0_0.xsd">
 
     <description>My Rule</description>
-    <rule ref ="category/java/errorprone.xml">
 
+    <rule ref ="category/java/errorprone.xml">
     </rule>
-    <rule ref="category/java/codestyle.xml">
+    <rule ref="category/java/codestyle.xml/LocalVariableCouldBeFinal">
 	<properties>
-       	 	<property name="LocalVariableCouldBeFinal" value="true" />
+       	 	<property name="LocalVariableCouldBeFinal" value="false" />
     	</properties>
     </rule>
     <rule ref="category/java/design.xml">
