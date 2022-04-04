@@ -54,7 +54,7 @@ public abstract class Player {
      * @param player the opponent
      * @param m int corresponding to monster move
      */
-@SuppressWarnings({"UseEqualsToCompareStrings","CompareObjectsWithEquals","all"})	
+@SuppressWarnings({"UseEqualsToCompareStrings"})	
     public void attack(Player player, int m) {
         Random random = new Random();
         double roll = random.nextDouble();
