@@ -5,17 +5,14 @@
          xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.sourceforge.io/ruleset_2_0_0.xsd">
 
     <description>My Rule</description>
-    <exclude-pattern>.*/src/main/java/CPUPlayer.*</exclude-pattern>
-    <exclude-pattern>.*/src/main/java/GameDriver.*</exclude-pattern>
-    <exclude-pattern>.*/src/main/java/HumanPlayer.*</exclude-pattern>
-    <exclude-pattern>.*/src/main/java/Monster.*</exclude-pattern>
-    <exclude-pattern>.*/src/main/java/Move.*</exclude-pattern>
-    <exclude-pattern>.*/src/main/java/Move.*</exclude-pattern>
+    <include-pattern>.*/src/main/java/Player.*</include-pattern>
     <rule ref ="category/java/errorprone.xml">
 
     </rule>
     <rule ref="category/java/codestyle.xml">
-
+	<properties>
+       	 	<property name="LocalVariableCouldBeFinal" value="true" />
+    	</properties>
     </rule>
     <rule ref="category/java/design.xml">
 
