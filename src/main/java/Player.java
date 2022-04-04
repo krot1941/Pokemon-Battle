@@ -54,7 +54,7 @@ public abstract class Player {
      * @param player the opponent
      * @param m int corresponding to monster move
      */
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings({"UseEqualsToCompareStrings","CompareObjectsWithEquals"})
     public void attack(Player player, int m) {
         Random random = new Random();
         double roll = random.nextDouble();
