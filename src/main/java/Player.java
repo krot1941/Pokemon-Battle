@@ -54,7 +54,7 @@ public abstract class Player {
      * @param player the opponent
      * @param m int corresponding to monster move
      */
-@SuppressWarnings({"unchecked"})	
+@SuppressWarnings({"PMD.CompareObjectsWithEquals","PMD.UseEqualsToCompareStrings","PMD.CognitiveComplexity"})	
     public void attack(Player player, int m) {
         Random random = new Random();
         double roll = random.nextDouble();
