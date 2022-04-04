@@ -16,8 +16,7 @@
     <properties>
         <property name="ignore" value="false" />
     </properties>
-</rule>		
-   
+</rule>		  
 
 
  <rule ref="category/java/design.xml">
