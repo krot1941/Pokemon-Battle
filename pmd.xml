@@ -10,9 +10,9 @@
 <rule ref ="category/java/errorprone.xml">
     </rule>
     
-
-<rule ref="category/java/codestyle.xml/">
-      <exclude name="ignoreForEachDecl"/>
+<rule ref="category/java/codestyle.xml">
+    <exclude name="WhileLoopsMustUseBraces"/>
+    <exclude name="IfElseStmtsMustUseBraces"/>
 </rule>
 
  <rule ref="category/java/design.xml">
