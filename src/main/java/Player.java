@@ -86,7 +86,7 @@ public abstract class Player {
                     break;
                 }
                 else {
-                    isSuperEffective = 2; 
+                    issupereffective = 2; 
                 }
             }
 
