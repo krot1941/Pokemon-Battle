@@ -7,12 +7,15 @@
 import java.util.Random;
 @SuppressWarnings({"UseEqualsToCompareStrings","CompareObjectsWithEquals"})
 public abstract class Player {
-    Monster monster;
+    private Monster monster;
 
     /**
      * Finds monster tied to player
      * @return the monster 
      */
+     public Monster getMonsterplus() {
+        return monster;
+    }
     public Monster getMonster() {
         return monster;
     }
@@ -90,15 +93,16 @@ public abstract class Player {
             }
 
             //Damage calculator
-            int damage = ((this.monster.getAttack() + this.monster.getMove(m).getPower() 
-                           - player.monster.getDefense()));
+	    
+            int SuperEffectiveStr=4, NotEffectiveStr=1, damage = (this.monster.getAttack() + this.monster.getMove(m).getPower() 
+                           - player.monster.getDefense());
             damage = (damage *isSuperEffective) / 2; //adjusts for dealing with int
             player.monster.hp -= damage;
 
-            if (isSuperEffective == 4) {
+            if (isSuperEffective == SuperEffectiveStr) {
                 System.out.println("It's super effective");
             }
-            if (isSuperEffective == 1) {
+            if (isSuperEffective == NotEffectiveStr) {
                 System.out.println("It's not very effective");
             }
             System.out.println(damage + " points of damage were done to " + player.monster.getName());
