@@ -9,10 +9,10 @@
     <rule ref ="category/java/errorprone.xml">
     </rule>
     <rule ref="category/java/codestyle.xml/LocalVariableCouldBeFinal">
-	<properties>
-       	 	<property name="LocalVariableCouldBeFinal" value="false" />
-    	</properties>
-    </rule>
+    <properties>
+        <property name="iiiiiiiiiiiiiii" value="true" />
+    </properties>
+</rule>
     <rule ref="category/java/design.xml">
 
     </rule>
