@@ -12,7 +12,7 @@
     
 
 <rule ref="category/java/codestyle.xml/">
-      <exclude name="LocalVariableCouldBeFinal"/>
+      <exclude name="ignoreForEachDecl"/>
 </rule>
 
  <rule ref="category/java/design.xml">
