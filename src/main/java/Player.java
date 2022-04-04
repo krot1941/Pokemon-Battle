@@ -7,7 +7,7 @@
 import java.util.Random;
 @SuppressWarnings({"UseEqualsToCompareStrings","CompareObjectsWithEquals"})
 public abstract class Player {
-    private Monster monster;
+    public Monster monster;
 
     /**
      * Finds monster tied to player
