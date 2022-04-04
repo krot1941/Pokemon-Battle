@@ -75,12 +75,10 @@ public abstract class Player {
             //Determines if attack is super or not very effective and determines modifier
             //multiplyed by 2 b/c using int later divided by 2
             for(int i=0; i <= 2; i++) {
-		@SuppressWarnings("unchecked")
                 if (this.monster.getMove(m).getType() == weakness[i]) { 
                     isSuperEffective = 4;
                     break;
                 }
-		@SuppressWarnings("unchecked")
                 if (this.monster.getMove(m).getType() == strength[i]) {
                     isSuperEffective = 1;
                     break;
