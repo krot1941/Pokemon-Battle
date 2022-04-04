@@ -25,7 +25,7 @@ public abstract class Player {
      * @return either true or false
      */
     public boolean hasLost() {
-        return (monster.getHP() <= 0) 
+        return (monster.getHP() <= 0);
     }
 
     /**
@@ -36,7 +36,7 @@ public abstract class Player {
      * @return either true or false
      */
     public boolean isFasterThan(Player enemy) {
-       return  (this.monster.getSpeed() >= enemy.getMonster().getSpeed()) 
+       return  (this.monster.getSpeed() >= enemy.getMonster().getSpeed());
     }
 
     /**
