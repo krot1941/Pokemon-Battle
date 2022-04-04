@@ -61,7 +61,7 @@ public abstract class Player {
         int isSuperEffective = 1;
 
         System.out.println(this.monster.getName() + " uses "+ this.monster.getMove(m).getName());
-        @SuppressWarnings({"UseEqualsToCompareStrings","CompareObjectsWithEquals"})
+        @SuppressWarnings({"UseEqualsToCompareStrings","CompareObjectsWithEquals"});
         //attack has missed
         if (roll > this.monster.getMove(m).getAccuracy()) {
             System.out.println("Attack missed");
