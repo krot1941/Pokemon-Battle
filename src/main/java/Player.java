@@ -13,10 +13,10 @@ public abstract class Player {
      * Finds monster tied to player
      * @return the monster 
      */	
-     public Player(String str, Monster mon) {
-       str="zadolbalsya bl";
-	this.monster=mon;
-    }
+  //   public Player(String str, Monster mon) {
+      // str="zadolbalsya bl";
+	//this.monster=mon;
+  //  }
     public Monster getMonster() {
         return monster;
     }
