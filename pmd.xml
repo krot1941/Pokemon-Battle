@@ -6,14 +6,21 @@
 
     <description>My Rule</description>
 
-    <rule ref ="category/java/errorprone.xml">
+    
+<rule ref ="category/java/errorprone.xml">
+
     </rule>
-    <rule ref="category/java/codestyle.xml/LocalVariableCouldBeFinal">
+    
+
+<rule ref="category/java/codestyle.xml/LocalVariableCouldBeFinal">
     <properties>
-        <property name="iiiiiiiiiiiiiii" value="true" />
+        <property name="ignore" value="false" />
     </properties>
-</rule>
-    <rule ref="category/java/design.xml">
+</rule>		
+   
+
+
+ <rule ref="category/java/design.xml">
 
     </rule>
 
