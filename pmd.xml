@@ -12,11 +12,12 @@
     
 <rule ref="category/java/codestyle.xml">
     <exclude name="LocalVariableCouldBeFinal"/>
-    <exclude name="IfElseStmtsMustUseBraces"/>
+    <exclude name="NoPackage"/>
+    <exclude name="MethodArgumentCouldBeFinal"/>
 </rule>
 
  <rule ref="category/java/design.xml">
-
+	<exclude name="LawOfDemeter"/>
     </rule>
   //  <exclude-pattern>.**/category/java/design.xml/LocalVariableCouldBeFinal.*</exclude-pattern>
 
