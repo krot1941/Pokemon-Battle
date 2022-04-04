@@ -5,7 +5,7 @@
  */
 
 import java.util.Random;
-@SuppressWarnings({"UseEqualsToCompareStrings","CompareObjectsWithEquals"})
+//@SuppressWarnings({"UseEqualsToCompareStrings","CompareObjectsWithEquals"})
 public abstract class Player {
     public transient Monster monster;
 
@@ -47,7 +47,7 @@ public abstract class Player {
      * @param player the opponent
      * @param m int corresponding to monster move
      */
-@SuppressWarnings({"PMD.CompareObjectsWithEquals","PMD.UseEqualsToCompareStrings","PMD.CognitiveComplexity"})	
+@SuppressWarnings({"PMD.DataflowAnomalyAnalysis","PMD.CompareObjectsWithEquals","PMD.UseEqualsToCompareStrings","PMD.CognitiveComplexity"})	
     public void attack(Player player, int movement) {
         Random random = new Random();
         double roll = random.nextDouble();
