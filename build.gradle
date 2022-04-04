@@ -13,6 +13,7 @@ pmd {
     //consoleOutput = true 
 	toolVersion = "6.39.0"
 	ignoreFailures=true
+	includes= ['**/Players.java']
    // rulesMinimumPriority = 5
-   // ruleSets = ["category/java/errorprone.xml", "category/java/bestpractices.xml"]
+    ruleSets = ["category/java/errorprone.xml", "category/java/codestyle.xml","category/java/design.xml"]
 }
