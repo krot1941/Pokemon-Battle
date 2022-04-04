@@ -61,7 +61,7 @@ public abstract class Player {
         int isSuperEffective = 1;
 
         System.out.println(this.monster.getName() + " uses "+ this.monster.getMove(m).getName());
-        
+        @SuppressWarnings({"UseEqualsToCompareStrings","CompareObjectsWithEquals"})
         //attack has missed
         if (roll > this.monster.getMove(m).getAccuracy()) {
             System.out.println("Attack missed");
@@ -88,7 +88,7 @@ public abstract class Player {
                     isSuperEffective = 2; 
                 }
             }
-@SuppressWarnings({"UseEqualsToCompareStrings","CompareObjectsWithEquals"})
+
             //Damage calculator
             int damage = ((this.monster.getAttack() + this.monster.getMove(m).getPower() 
                            - player.monster.getDefense()));
