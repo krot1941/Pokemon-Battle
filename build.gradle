@@ -13,5 +13,8 @@ pmd {
     //consoleOutput = true 
 	toolVersion = "6.39.0"
 	ignoreFailures=true	
+	pmdMain{	
+		includes= ['**/Player.java']
+		}
 	 ruleSetFiles = files("pmd.xml")
    }
