@@ -5,7 +5,7 @@
  */
 
 import java.util.Random;
-
+@SuppressWarnings({"UseEqualsToCompareStrings","CompareObjectsWithEquals"})
 public abstract class Player {
     Monster monster;
 
@@ -54,7 +54,7 @@ public abstract class Player {
      * @param player the opponent
      * @param m int corresponding to monster move
      */
-	@SuppressWarnings({"UseEqualsToCompareStrings","CompareObjectsWithEquals"})
+@SuppressWarnings({"UseEqualsToCompareStrings","CompareObjectsWithEquals"})	
     public void attack(Player player, int m) {
         Random random = new Random();
         double roll = random.nextDouble();
@@ -68,7 +68,6 @@ public abstract class Player {
         }
 
         //attack hits
-@SuppressWarnings({"UseEqualsToCompareStrings","CompareObjectsWithEquals"})
         else {
             String[] weakness = player.monster.getWeakness(); //stores opponents weakness
             String[] strength = player.monster.getStrength(); //stores opponents strength
@@ -89,7 +88,7 @@ public abstract class Player {
                     isSuperEffective = 2; 
                 }
             }
-
+@SuppressWarnings({"UseEqualsToCompareStrings","CompareObjectsWithEquals"})
             //Damage calculator
             int damage = ((this.monster.getAttack() + this.monster.getMove(m).getPower() 
                            - player.monster.getDefense()));
