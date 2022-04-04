@@ -78,11 +78,11 @@ public abstract class Player {
 	
             for(int i=0; i <= 2; i++) {
                 if (this.monster.getMove(movement).getType() == weakness[i]) { 
-                    isSuperEffective = 4;
+                    issupereffective = 4;
                     break;
                 }
                 if (this.monster.getMove(movement).getType() == strength[i]) {
-                    isSuperEffective = 1;
+                    issupereffective = 1;
                     break;
                 }
                 else {
@@ -94,13 +94,13 @@ public abstract class Player {
 	    
             int supereffectivestr=4, noteffectivestr=1, damage = this.monster.getAttack() + this.monster.getMove(movement).getPower() 
                            - player.monster.getDefense();
-            damage = (damage *isSuperEffective) / 2; //adjusts for dealing with int
+            damage = (damage *issupereffective) / 2; //adjusts for dealing with int
             player.monster.hp -= damage;
 
-            if (isSuperEffective == supereffectivestr) {
+            if (issupereffective == supereffectivestr) {
                 System.out.println("It's super effective");
             }
-            if (isSuperEffective == noteffectivestr) {
+            if (issupereffective == noteffectivestr) {
                 System.out.println("It's not very effective");
             }
             System.out.println(damage + " points of damage were done to " + player.monster.getName());
