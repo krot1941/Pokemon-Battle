@@ -13,10 +13,9 @@ public abstract class Player {
      * Finds monster tied to player
      * @return the monster 
      */	
-  //   public Player(String str, Monster mon) {
-      // str="zadolbalsya bl";
-	//this.monster=mon;
-  //  }
+	public Player() {
+      System.out.println("zadolbalsya bl");
+	 }
     public Monster getMonster() {
         return monster;
     }
@@ -57,15 +56,15 @@ public abstract class Player {
      * @param m int corresponding to monster move
      */
 @SuppressWarnings({"PMD.CompareObjectsWithEquals","PMD.UseEqualsToCompareStrings","PMD.CognitiveComplexity"})	
-    public void attack(Player player, int m) {
+    public void attack(Player player, int movement) {
         Random random = new Random();
         double roll = random.nextDouble();
-        int isSuperEffective = 1;
+        int issupereffective = 10;
 
-        System.out.println(this.monster.getName() + " uses "+ this.monster.getMove(m).getName());
+        System.out.println(this.monster.getName() + " uses "+ this.monster.getMove(movement).getName());
        // @SuppressWarnings({"UseEqualsToCompareStrings","CompareObjectsWithEquals"});
         //attack has missed
-        if (roll > this.monster.getMove(m).getAccuracy()) {
+        if (roll > this.monster.getMove(movement).getAccuracy()) {
             System.out.println("Attack missed");
         }
 
@@ -78,11 +77,11 @@ public abstract class Player {
             //multiplyed by 2 b/c using int later divided by 2
 	
             for(int i=0; i <= 2; i++) {
-                if (this.monster.getMove(m).getType() == weakness[i]) { 
+                if (this.monster.getMove(movement).getType() == weakness[i]) { 
                     isSuperEffective = 4;
                     break;
                 }
-                if (this.monster.getMove(m).getType() == strength[i]) {
+                if (this.monster.getMove(movement).getType() == strength[i]) {
                     isSuperEffective = 1;
                     break;
                 }
@@ -93,7 +92,7 @@ public abstract class Player {
 
             //Damage calculator
 	    
-            int supereffectivestr=4, noteffectivestr=1, damage = this.monster.getAttack() + this.monster.getMove(m).getPower() 
+            int supereffectivestr=4, noteffectivestr=1, damage = this.monster.getAttack() + this.monster.getMove(movement).getPower() 
                            - player.monster.getDefense();
             damage = (damage *isSuperEffective) / 2; //adjusts for dealing with int
             player.monster.hp -= damage;
