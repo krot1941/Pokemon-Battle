@@ -13,7 +13,10 @@ public abstract class Player {
      * Finds monster tied to player
      * @return the monster 
      */
-     public Player getplayer(Monster monster) {
+	 public Player() {
+	this.monster = NULL;
+	}	
+     public Player(Monster monster) {
        this.monster = monster;
     }
     public Monster getMonster() {
