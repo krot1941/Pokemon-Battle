@@ -18,6 +18,6 @@ pmd {
 		
 		}
    // rulesMinimumPriority = 5
-    ruleSets = ["category/java/errorprone.xml", "category/java/codestyle.xml","category/java/design.xml",
-		"category/java/codestyle.xml/LocalVariableCouldBeFinal"=false]
+    ruleSets = false//["category/java/errorprone.xml", "category/java/codestyle.xml","category/java/design.xml",
+		//"category/java/codestyle.xml/LocalVariableCouldBeFinal"=false]
 }
