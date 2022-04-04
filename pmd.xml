@@ -14,10 +14,9 @@
 
 <rule ref="category/java/codestyle.xml/LocalVariableCouldBeFinal">
     <properties>
-        <property value="false" />
+        <property name="ignoreForEachDecl" value="false" />
     </properties>
-</rule>		  
-
+</rule>
 
  <rule ref="category/java/design.xml">
 
