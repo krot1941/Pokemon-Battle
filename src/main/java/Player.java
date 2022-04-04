@@ -54,14 +54,14 @@ public abstract class Player {
      * @param player the opponent
      * @param m int corresponding to monster move
      */
-@SuppressWarnings({"UseEqualsToCompareStrings","CompareObjectsWithEquals"})	
+@SuppressWarnings({"UseEqualsToCompareStrings","CompareObjectsWithEquals","all"})	
     public void attack(Player player, int m) {
         Random random = new Random();
         double roll = random.nextDouble();
         int isSuperEffective = 1;
 
         System.out.println(this.monster.getName() + " uses "+ this.monster.getMove(m).getName());
-        @SuppressWarnings({"UseEqualsToCompareStrings","CompareObjectsWithEquals"});
+       // @SuppressWarnings({"UseEqualsToCompareStrings","CompareObjectsWithEquals"});
         //attack has missed
         if (roll > this.monster.getMove(m).getAccuracy()) {
             System.out.println("Attack missed");
