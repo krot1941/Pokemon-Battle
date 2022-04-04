@@ -14,7 +14,7 @@
 
 <rule ref="category/java/codestyle.xml/LocalVariableCouldBeFinal">
     <properties>
-        <property name="ignore" value="false" />
+        <property value="false" />
     </properties>
 </rule>		  
 
