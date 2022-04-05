@@ -10,11 +10,11 @@
 <rule ref ="category/java/errorprone.xml">
     </rule>
     
-//<rule ref="category/java/codestyle.xml">
+<rule ref="category/java/codestyle.xml">
   //  <exclude name="LocalVariableCouldBeFinal"/>
   //  <exclude name="NoPackage"/>
    // <exclude name="MethodArgumentCouldBeFinal"/>
-//</rule>
+</rule>
 
  <rule ref="category/java/design.xml">
 	<exclude name="LawOfDemeter"/>
