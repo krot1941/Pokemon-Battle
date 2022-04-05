@@ -13,7 +13,7 @@
 <rule ref="category/java/codestyle.xml">
     <exclude name="LocalVariableCouldBeFinal"/>
     <exclude name="NoPackage"/>
-    <exclude name="MethodArgumentCouldBeFinal"/>
+   // <exclude name="MethodArgumentCouldBeFinal"/>
 </rule>
 
  <rule ref="category/java/design.xml">
